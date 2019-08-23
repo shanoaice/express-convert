@@ -29,7 +29,6 @@ koa.use(convert(expressMiddleware));
 - `req.cookies`: Koa uses the `cookies` module so this property is not a parsed cookie object, for what it is, see [Koa documents](https://koajs.com/#context).
 - `req.params`, `req.app.METHOD()` and `req.route`: Koa does not have router, so the properties is always `undefined` and the method always returns `undefined` and do nothing.
 - `req.signedCookies`: this property is `undefined`, use `req.cookies.get()` with `signed` option.
-- `req.xhr`: Koa dones't support this, so this property is `undefined`.
 - `req.range`: Koa dones't support this, so this function always return undefined and do nothing.
 - `res.locals`: Koa dones't support this, so this would be a empty object.
 - `res.cookie`: Koa uses the `cookie` module to do the job, so the option is a little bit different, for more information, see [Koa documents](https://koajs.com/#context).
