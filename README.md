@@ -3,6 +3,18 @@
 > Convert express middleware to koa middleware  
 > There is some difference between Express middleware and the converter, please see below.
 
+## Install
+```
+npm install express-convert
+```
+
+## Usage
+```javascript
+const convert = require('express-convert');
+
+koa.use(convert(expressMiddleware));
+```
+
 ## Compatibility
 
 | express-convert | express | Property Rewrite |
