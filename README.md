@@ -5,9 +5,9 @@
 
 ## Compatibility
 
-| express-convert | express | Property Rewrite | Router |
-| --------------- | ------- | :--------------: | :----: |
-| `@1`            | `@4`    |       :x:        |  :x:   |
+| express-convert | express | Property Rewrite |
+| --------------- | ------- | :--------------: |
+| `@1`            | `@4`    |       :x:        |
 
 ## Some differences
 
