@@ -1,0 +1,33 @@
+{
+  "name": "express-convert",
+  "version": "1.0.0",
+  "description": "Convert Express middleware to Koa middleware",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KsRyY/express-convert.git"
+  },
+  "keywords": [
+    "koa",
+    "express",
+    "web",
+    "http",
+    "middleware",
+    "request",
+    "response"
+  ],
+  "author": "KsRyY",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KsRyY/express-convert/issues"
+  },
+  "homepage": "https://github.com/KsRyY/express-convert#readme",
+  "devDependencies": {
+    "eslint": "^6.2.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2"
+  }
+}
