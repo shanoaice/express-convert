@@ -103,5 +103,10 @@ function convert(expressMiddleware) {
 			},
 			vary: ctx.response.vary,
 		};
+		function expressNext() {
+			next().then().catch((e) => {
+				if (e) throw e;
+			});
+		}
 	};
 }
