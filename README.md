@@ -17,9 +17,9 @@ koa.use(convert(expressMiddleware));
 
 ## Compatibility
 
-| express-convert | express | Property Rewrite |
-| --------------- | ------- | :--------------: |
-| `@1`            | `@4`    |       :x:        |
+| express-convert | express | Property Rewrite |                  `req.xhr`                   |
+| --------------- | ------- | :--------------: | :------------------------------------------: |
+| `@1`            | `@4`    |       :x:        | :heavy_check_mark: (implemented at `@1.0.1`) |
 
 ## Some differences
 

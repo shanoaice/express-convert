@@ -57,7 +57,7 @@ function convert(expressMiddleware) {
 			secure: ctx.secure,
 			cookies: ctx.cookies,
 			subdomains: ctx.subdomains,
-			xhr: undefined,
+			xhr: (ctx.get('X-Requested-With') === 'XMLHttpRequest'),
 			signedCookies: undefined,
 			accepts: ctx.accepts,
 			acceptsCharsets: ctx.acceptsCharsets,
