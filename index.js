@@ -39,7 +39,7 @@ function convert(expressMiddleware) {
 			unsubscribe() {},
 		};
 		// Express's req object implementation on Koa
-		const expressReq = {
+		const expressRequest = {
 			app,
 			baseUrl: ctx.url,
 			body: (ctx.request.body ? ctx.request.body : undefined),
@@ -108,5 +108,8 @@ function convert(expressMiddleware) {
 				if (e) throw e;
 			});
 		}
+		expressMiddleware(expressRequest, expressResponse, expressNext);
 	};
 }
+
+module.exports = convert;
