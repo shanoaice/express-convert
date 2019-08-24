@@ -39,9 +39,8 @@ function convert(expressMiddleware) {
 			unsubscribe() {},
 		};
 		// Express's req object implementation on Koa
-		const expressRequest = {
+		let expressRequest = {
 			app,
-			baseUrl: ctx.url,
 			body: (ctx.request.body ? ctx.request.body : undefined),
 			fresh: ctx.fresh,
 			stale: ctx.stale,
@@ -51,7 +50,6 @@ function convert(expressMiddleware) {
 			method: ctx.method,
 			originalUrl: ctx.originalUrl,
 			params: undefined,
-			path: ctx.path,
 			protocol: ctx.protocol,
 			query: ctx.query,
 			secure: ctx.secure,
@@ -67,6 +65,38 @@ function convert(expressMiddleware) {
 			get: ctx.request.get,
 			range() {},
 		};
+		expressRequest = Object.defineProperties(expressRequest, {
+			baseUrl: {
+				configurable: true,
+				enumerable: true,
+				get() {
+					return ctx.request.url;
+				},
+				set(val) {
+					ctx.request.url = val;
+				},
+			},
+			path: {
+				configurable: true,
+				enumerable: true,
+				get() {
+					return ctx.request.path;
+				},
+				set(val) {
+					ctx.request.path = val;
+				},
+			},
+			query: {
+				configurable: true,
+				enumerable: true,
+				get() {
+					return ctx.request.query;
+				},
+				set(val) {
+					ctx.request.query = val;
+				},
+			},
+		});
 		// Express's response object implementation on Koa
 		const expressResponse = {
 			app,
@@ -74,7 +104,7 @@ function convert(expressMiddleware) {
 			locals: {},
 			append: ctx.append,
 			attachment: ctx.attachment,
-			cookie: ctx.cookie.set,
+			cookie: ctx.cookies.set,
 			clearCookie() {},
 			sendFile() {},
 			download() {},
