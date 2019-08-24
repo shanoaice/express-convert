@@ -25,13 +25,15 @@ app.use(convert(expressMiddleware));
 
 ## Feature
 
-| Version |   `res.jsonp()`    | Custom JSON parser |
-| :-----: | :----------------: | :----------------: |
-|  1.2.0  |        :x:         |        :x:         |
-|  1.3.0  |     :o:**\***      |        :x:         |
-|  1.3.1  | :heavy_check_mark: |        :x:         |
+| Version |   `res.jsonp()`    | Custom JSON parser** |
+| :-----: | :----------------: | :------------------: |
+|  1.2.0  |        :x:         |         :x:          |
+|  1.3.0  |     :o:**\***      |         :x:          |
+|  1.3.1  | :heavy_check_mark: |         :x:          |
+|  1.4.0  | :heavy_check_mark: |  :heavy_check_mark:  |
 
-\* does not support custom callback name
+\* does not support custom callback name  
+\*\* the custom parser only applies on the `res.jsonp()` method because Koa will parse JSON for you in other cases.
 
 ## Some differences
 
@@ -45,7 +47,7 @@ app.use(convert(expressMiddleware));
 - `res.cookie`: Koa uses the `cookie` module to do the job, so the option is a little bit different, for more information, see [Koa documents](https://koajs.com/#context).
 - `res.clearCookie()`: Koa does not support it, so this function will always return undefined and do nothing.
 - `res.download()` and `res.sendFile()`: Koa does not support it, so this function will always return undefined and do nothing, consider use `res.attach()` to do file hosting job.
-- `res.end()`: This generally does nothing because in Koa you do not need to end the response manually, just do nothing. Koa will end the response for you.
-- `res.jsonp()`: Koa does not have integrated support for this method, this is only a simple implementation and it currently does not support custom callback name. If you want to get full jsonp support, have a look at [koa-jsonp](https://github.com/kilianc/koa-jsonp).
+- `res.end()`: This generally does nothing because in Koa you do not need to end the response manually, just do nothing. Koa will end the response automatically.
+- `res.jsonp()`: Koa does not have integrated support for this method, this is only a simple implementation. For better jsonp support, have a look at [koa-jsonp](https://github.com/kilianc/koa-jsonp).
 - `res.location()` and `res.links()`: Koa does not have integrated support for them, but I plan to implement them in future versions, now they generally do nothing.
 - `res.render()`: Koa does not support this, so it does nothing.
