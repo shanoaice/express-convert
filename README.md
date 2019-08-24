@@ -11,8 +11,10 @@ npm install express-convert
 ## Usage
 ```javascript
 const convert = require('express-convert');
+const Koa = require('koa');
+const app = new Koa();
 
-koa.use(convert(expressMiddleware));
+app.use(convert(expressMiddleware));
 ```
 
 ## Compatibility
