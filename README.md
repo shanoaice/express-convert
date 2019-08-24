@@ -27,8 +27,6 @@ app.use(convert(expressMiddleware));
 
 | Version | `ctx` prop Rewrite |     `req.xhr`      |   `res.jsonp()`    | Custom JSON parser |
 | :-----: | :----------------: | :----------------: | :----------------: | :----------------: |
-|  1.0.0  |        :x:         |        :x:         |        :x:         |        :x:         |
-|  1.1.0  |        :x:         | :heavy_check_mark: |        :x:         |        :x:         |
 |  1.2.0  | :heavy_check_mark: | :heavy_check_mark: |        :x:         |        :x:         |
 |  1.3.0  | :heavy_check_mark: | :heavy_check_mark: |     :o:**\***      |        :x:         |
 |  1.3.1  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |        :x:         |
