@@ -2,6 +2,7 @@ function convert(expressMiddleware) {
 	return async function convertedMiddleware(ctx, next) {
 		const expressSettingTable = {
 			'jsonp callback name': 'callback',
+			'json parser': JSON,
 		};
 		// Express's res.app and req.app implementation in Koa
 		const app = {
@@ -119,7 +120,7 @@ function convert(expressMiddleware) {
 			},
 			jsonp(body) {
 				ctx.set('Contnent-Type', 'text/javascript');
-				ctx.body = `${expressSettingTable['jsonp callback name']}(${JSON.stringify(body)})`;
+				ctx.body = `${expressSettingTable['jsonp callback name']}(${expressSettingTable['jsonp callback name'].stringify(body)})`;
 			},
 			location() {},
 			links() {},
