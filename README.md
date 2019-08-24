@@ -17,13 +17,12 @@ koa.use(convert(expressMiddleware));
 
 ## Compatibility
 
-| express-convert | express | Property Rewrite |                  `req.xhr`                   |
-| --------------- | ------- | :--------------: | :------------------------------------------: |
-| `@1`            | `@4`    |       :x:        | :heavy_check_mark: (implemented at `@1.0.1`) |
+| express-convert | express |               Property Rewrite               |                  `req.xhr`                   |
+| --------------- | ------- | :------------------------------------------: | :------------------------------------------: |
+| `@1`            | `@4`    | :heavy_check_mark: (implemented ar `@1.2.0`) | :heavy_check_mark: (implemented at `@1.0.1`) |
 
 ## Some differences
 
-- Property rewrite won't work in this version, I may add property rewrite support at `express-convert@2`.
 - `req.app`: req.app is a `Koa` app instance, not an `Express` app instance.
 - Application Setting: `Koa` dones't have these settings, but there will be a replacement with empty setting table. You can use it as a per-middleware store.
 - `req.cookies`: Koa uses the `cookies` module so this property is not a parsed cookie object, for what it is, see [Koa documents](https://koajs.com/#context).
