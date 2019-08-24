@@ -19,18 +19,18 @@ app.use(convert(expressMiddleware));
 
 ## Express Compatibility
 
-| express-convert | express |               Property Rewrite               |                  `req.xhr`                   |
-| --------------- | ------- | :------------------------------------------: | :------------------------------------------: |
-| `@1`            | `@4`    | :heavy_check_mark: (implemented ar `@1.2.0`) | :heavy_check_mark: (implemented at `@1.0.1`) |
+| express-convert | express |
+| --------------- | ------- |
+| `@1`            | `@4`    |
 
 ## Feature
 
-| Version |  Property Rewrite  |     `req.xhr`      |             `res.jsonp()`             | Custom JSON parser |
-| ------- | :----------------: | :----------------: | :-----------------------------------: | :----------------: |
-| 1.0.0   |        :x:         |        :x:         |                  :x:                  |        :x:         |
-| 1.1.0   |        :x:         | :heavy_check_mark: |                  :x:                  |        :x:         |
-| 1.2.0   | :heavy_check_mark: | :heavy_check_mark: |                  :x:                  |        :x:         |
-| 1.3.0   | :heavy_check_mark: | :heavy_check_mark: | :o: (no custom callback name support) |        :x:         |
+| Version |  Property Rewrite  |     `req.xhr`      |          `res.jsonp()`           | Custom JSON parser |
+| ------- | :----------------: | :----------------: | :------------------------------: | :----------------: |
+| 1.0.0   |        :x:         |        :x:         |               :x:                |        :x:         |
+| 1.1.0   |        :x:         | :heavy_check_mark: |               :x:                |        :x:         |
+| 1.2.0   | :heavy_check_mark: | :heavy_check_mark: |               :x:                |        :x:         |
+| 1.3.0   | :heavy_check_mark: | :heavy_check_mark: | :o: (no custom callback support) |        :x:         |
 
 ## Some differences
 
