@@ -116,7 +116,8 @@ function convert(expressMiddleware) {
 				ctx.body = body;
 			},
 			jsonp(body) {
-				ctx.body = body;
+				ctx.set('Contnent-Type', 'text/javascript');
+				ctx.body = `callback(${JSON.stringify(body)})`;
 			},
 			location() {},
 			links() {},
