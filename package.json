@@ -27,7 +27,7 @@
   "homepage": "https://github.com/KsRyY/express-convert#readme",
   "devDependencies": {
     "eslint": "8.42.0",
-    "eslint-config-airbnb-base": "14.0.0",
+    "eslint-config-airbnb-base": "15.0.0",
     "eslint-plugin-import": "2.27.5"
   }
 }
